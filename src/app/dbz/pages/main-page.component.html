@@ -1,0 +1,15 @@
+<h1>DBZ Personajes </h1>
+<hr>
+<div class="row">
+  <div class="col">
+
+    <!--Aquí se recibe el evento del list OnDelete y haya que conectarlo con el main page .ts-->
+    <dbz-list [characterList]="characters" (onDeleted)=" onDelete($event)"
+    ></dbz-list>
+
+  </div>
+  <div class="div">
+
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+  </div>
+</div>
